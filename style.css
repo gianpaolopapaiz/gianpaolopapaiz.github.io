@@ -1,0 +1,220 @@
+body {
+    font-size: 20px;
+    font-family: Montserrat;
+    letter-spacing: 0.01rem;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+}
+/*nav*/
+
+nav {
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    position: fixed;
+    background-color: white;
+    opacity: 0.95;
+    font-weight: 400;
+}
+
+nav p {
+    min-width: fit-content ;
+    padding-left: 1rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+nav li {
+    padding: 0 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover {
+    font-weight: 600;
+    color: darkslateblue;
+}
+
+.active-page {
+    font-weight: 600;
+}
+
+/*banner*/
+
+.banner {
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(5, 1fr);
+    background-image: url("./Resources/images/banner-Gianpa-desktop-min.jpg");
+    background-position: top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 40rem;
+    left: 0;
+    right: 0;
+    margin-top: 3rem;
+
+}
+
+.banner-text {
+    grid-area: 2 / 4 / span 2 / span 2;
+    padding-right: 1rem;
+}
+
+.banner button {
+    width: 5rem;
+    height: 1.7rem;
+    background-color: darkslateblue;
+    border:darkslateblue 0.15rem solid;
+    color: white;
+    font-family: Montserrat;
+    font-size: medium;
+    font-weight: 400;
+    letter-spacing: 0.02rem;
+}
+
+.banner button:hover {
+    background-color: black;
+    color: white;
+    border: black 0.15rem solid
+}
+
+.banner button a {
+    color: white;
+    text-decoration: none;
+}
+
+/*projects*/
+
+.protto {
+    border-top: black solid 0.2rem;
+    border-bottom: black solid 0.2rem;
+    text-align: center;
+    background-image: url(./Resources/images/protto-pattern.png);
+    color: black;
+    padding: 2rem;
+    background-color: white;
+}
+
+.protto p {
+    max-width: 40rem;
+    margin: 1rem auto;
+    
+}
+.videos {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.video {
+    padding: 1rem;
+}
+
+
+/*Skills*/
+.skills ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.skills li {
+    width: 7rem;
+    height: 7rem;
+    font-size: 1rem;
+}
+
+.skills li:hover{
+    transform: scale(1.1);
+}
+.skills p {
+    margin-top: 0.3rem;
+}
+
+/*footer*/
+
+footer {
+    display: flex;
+    background-image: linear-gradient(to bottom right, darkSlateBlue, black);
+    color: white;
+    width: 100%;
+    height: 7rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    right: 0;
+}
+
+
+@media only screen and (max-width: 550px) {
+    nav {
+        flex-direction: column;
+        height: 4.4rem;
+    }
+
+    nav ul {
+        justify-content: center;
+        margin: 0.3rem 0;
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    nav p {
+        margin-bottom: 0;
+        margin-top: 0.3rem;
+        padding: 0;
+        border-bottom: darkslateblue 0.2rem dotted;
+        padding-bottom: 0.4rem;
+    }
+
+    .banner {
+        margin-top: 4.4rem;
+    }
+}
+
+@media only screen and (max-width: 728px) {
+    .banner {
+        grid-template: repeat(8, 1fr) / 1fr 6fr 1fr;
+        background-image: url("./Resources/images/banner-Gianpa-mobile-min.jpg");
+        background-position: top;
+        text-align: center;
+    }
+
+    .banner-text {
+        grid-area: 1 / 2 / span 2 / span 1;
+        margin-top: 1rem;
+        padding-right: 0;
+    }
+}
+
+@media only screen and (min-width: 1350px) {
+    .banner {
+       height: 50rem;
+}
