@@ -1,4 +1,4 @@
-let logo = document.getElementById('logo');
+/*let logo = document.getElementById('logo');
 
 function whiteRabbit() {
     let paragraph = document.createElement('p');
